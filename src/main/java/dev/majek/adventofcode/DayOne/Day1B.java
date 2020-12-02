@@ -4,6 +4,7 @@ public class Day1B {
 
     /**
      * Code for day one programming challenge B
+     * Answer for my values: 46,584,630
      */
     public static void main(String[] args) {
         for (int i : Inputs.getInputs())

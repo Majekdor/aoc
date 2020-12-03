@@ -20,10 +20,9 @@ public class Day2A {
             char letter = input.charAt(input.indexOf(":")-1);
             String password = input.substring(input.indexOf(":")+1);
             int count = 0;
-            for (char a : password.toCharArray()) {
+            for (char a : password.toCharArray())
                 if (a == letter)
                     count++;
-            }
             if (count >= lowerBound && count <= upperBound)
                 runningTotal++;
         }

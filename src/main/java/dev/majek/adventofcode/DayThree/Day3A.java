@@ -15,7 +15,8 @@ public class Day3A {
         String[] inputs = data.split("\n");
         int moveRight = 0, runningTotal = 0;
         for (String input : inputs) {
-            input = input.repeat(100); // Lmao
+            if (moveRight > input.length()-1)
+                moveRight -= input.length();
             if (input.charAt(moveRight) == '#')
                 runningTotal++;
             moveRight += 3;

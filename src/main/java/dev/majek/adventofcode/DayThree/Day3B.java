@@ -13,39 +13,19 @@ public class Day3B {
         String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
                 "AdventOfCode\\src\\main\\resources\\day3inputs.txt")));
         String[] inputs = data.split("\n");
-        int moveRight = 0;
-        int a = 0, b = 0, c = 0, d = 0;
-        for (String input : inputs) {
-            input = input.repeat(1000);
-            if (input.charAt(moveRight) == '#') {
-                a++;
-            }
-            moveRight += 1;
+        System.out.println("Answer is: " + ((long) 268 * run(1, 1, inputs) * run(5, 1, inputs)
+                * run(7, 1, inputs) * run(1, 2, inputs)));
+    }
+
+    public static int run(int moveRight, int moveDown, String[] inputs) {
+        int toReturn = 0, toMove = 0;
+        for (int i = 0; i < 323; i+=moveDown) {
+            if (toMove > inputs[i].length()-1)
+                toMove -= inputs[i].length();
+            if (inputs[i].charAt(toMove) == '#')
+                toReturn++;
+            toMove += moveRight;
         }
-        moveRight = 0;
-        for (String input : inputs) {
-            input = input.repeat(1000);
-            if (input.charAt(moveRight) == '#') {
-                b++;
-            }
-            moveRight += 5;
-        }
-        moveRight = 0;
-        for (String input : inputs) {
-            input = input.repeat(1000);
-            if (input.charAt(moveRight) == '#') {
-                c++; // haha
-            }
-            moveRight += 7;
-        }
-        moveRight = 0;
-        for (int i = 0; i <= 323; i+=2) {
-            inputs[i] = inputs[i].repeat(1000);
-            if (inputs[i].charAt(moveRight) == '#') {
-                d++;
-            }
-            moveRight += 1;
-        }
-        System.out.println("Answer is: " + ((long) a * 268 * b * c * d));
+        return toReturn;
     }
 }

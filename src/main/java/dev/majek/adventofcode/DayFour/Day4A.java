@@ -10,7 +10,7 @@ public class Day4A {
      * Answer for my values: 264
      */
     public static void main(String[] args) throws Exception {
-        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
+        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\IdeaProjects\\" +
                 "AdventOfCode\\src\\main\\resources\\day4inputs.txt")));
         String[] inputs = data.split("\n\n");
         int counter = 0;
@@ -18,6 +18,6 @@ public class Day4A {
             if (input.contains("ecl") && input.contains("pid") && input.contains("eyr") && input.contains("hcl") &&
                     input.contains("byr") && input.contains("iyr") && input.contains("hgt"))
                 counter++;
-        System.out.println(counter);
+        System.out.println("Answer is: " + counter);
     }
 }

@@ -11,7 +11,7 @@ public class Day4B {
      * Answer for my values: 224
      */
     public static void main(String[] args) throws Exception {
-        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
+        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\IdeaProjects\\" +
                 "AdventOfCode\\src\\main\\resources\\day4inputs.txt")));
         String[] inputs = data.split("\n\n");
         int counter = 0;
@@ -21,7 +21,7 @@ public class Day4B {
                 String ecl = getField(input, "ecl:");
                 boolean validEcl = Arrays.asList("amb", "blu", "brn", "gry", "grn", "hzl", "oth").contains(ecl);
                 String pid = getField(input, "pid:");
-                boolean validPid = pid.matches("[0-9]{9}") && pid.length() == 9;
+                boolean validPid = pid.matches("[0-9]{9}");
                 String eyr = getField(input, "eyr:");
                 boolean validEyr = eyr.length() == 4 && Integer.parseInt(eyr) >= 2020 && Integer.parseInt(eyr) <= 2030;
                 String hcl = getField(input, "hcl:");
@@ -30,22 +30,14 @@ public class Day4B {
                 boolean validByr = byr.length() == 4 && Integer.parseInt(byr) >= 1920 && Integer.parseInt(byr) <= 2002;
                 String iyr = getField(input, "iyr:");
                 boolean validIyr = iyr.length() == 4 && Integer.parseInt(iyr) >= 2010 && Integer.parseInt(iyr) <= 2020;
-                String hgt = getField(input, "hgt:");
-                if (validEyr && validByr && validIyr && validHcl && validPid && validHeight(hgt) && validEcl)
+                String hgt = getField(input, "hgt:"); String num = hgt.substring(0, hgt.length()-2);
+                boolean validHgt = (hgt.contains("cm") && Integer.parseInt(num) >= 150 && Integer.parseInt(num) <= 193)
+                        || (hgt.contains("in") && Integer.parseInt(num) >= 59 && Integer.parseInt(num) <= 76);
+                if (validEyr && validByr && validIyr && validHcl && validPid && validHgt && validEcl)
                     counter++;
             }
         }
         System.out.println("Answer is: " + counter);
-    }
-
-    public static boolean validHeight(String hgt) {
-        if (hgt.contains("cm") || hgt.contains("in")) {
-            String num = hgt.substring(0, hgt.length()-2);
-            if (hgt.contains("cm") && Integer.parseInt(num) >= 150 && Integer.parseInt(num) <= 193)
-                return true;
-            else return hgt.contains("in") && Integer.parseInt(num) >= 59 && Integer.parseInt(num) <= 76;
-        } else
-            return false;
     }
 
     public static String getField(String input, String field) {
@@ -59,12 +51,11 @@ public class Day4B {
 
     public static char findWhiteSpace(int start, String input) {
         int index = -1;
-        for (int i = start; i < input.length(); i++) {
+        for (int i = start; i < input.length(); i++)
             if (Character.isWhitespace(input.charAt(i)) || input.charAt(i) == '\n') {
                 index = i;
                 break;
             }
-        }
         if (index == -1)
             index = input.length();
         return input.charAt(index);

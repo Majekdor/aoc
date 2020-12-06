@@ -2,32 +2,22 @@ package dev.majek.adventofcode.DaySix;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class Day6B {
 
     /**
-     * Code for day six programming challenge A
+     * Code for day six programming challenge B
      * Answer for my values: 3143
      */
     public static void main(String[] args) throws Exception {
-        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\IdeaProjects\\" +
+        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
                 "AdventOfCode\\src\\main\\resources\\day6inputs.txt")));
-        String[] inputs = data.split("\n\n");
-        int runningTotal = 0;
-        for (String groups : inputs) {
-            String[] people = groups.split("\n");
-            String builder = people[0];
-            for (int i = 1; i <= people.length; i++) {
-                for (char c : inputs[i].toCharArray()) {
-                    if (builder.indexOf(c) == -1)
-                        builder = builder.replaceAll(String.valueOf(c), "");
-                    for (char d : builder.toCharArray())
-                        if (people[i - 1].indexOf(d) == -1)
-                            builder = builder.replaceAll(String.valueOf(d), "");
-                }
-            }
-            runningTotal += builder.length();
-        }
-        System.out.println("Answer is: " + runningTotal);
+        List<String> inputs = Arrays.stream(data.split("\n\n")).collect(Collectors.toList());
+        long answer = inputs.stream().map(line -> line.split("\n")).mapToLong(chars -> chars[0].chars()
+                .filter(ch  -> Arrays.stream(chars).allMatch(c -> c.indexOf(ch) >= 0)).count()).sum();
+        System.out.println("Answer is: " + answer);
     }
 }

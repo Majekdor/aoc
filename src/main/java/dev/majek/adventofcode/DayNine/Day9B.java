@@ -1,7 +1,5 @@
 package dev.majek.adventofcode.DayNine;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;

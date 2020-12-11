@@ -18,7 +18,7 @@ public class Day11A {
      * Answer for my values: 2238
      */
     public static void main(String[] args) throws Exception {
-        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
+        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\IdeaProjects\\" +
                 "AdventOfCode\\src\\main\\resources\\day11inputs.txt")));
         List<String> inputs = Arrays.stream(data.split("\n")).collect(Collectors.toList());
         int height = inputs.size();
@@ -28,10 +28,15 @@ public class Day11A {
             seatChart[i] = inputs.get(i).toCharArray();
 
         boolean stabilized = updateSeatingArea();
-        while(!stabilized){
+        while(!stabilized)
             stabilized = updateSeatingArea();
-        }
-        System.out.println(getOccupiedSeatsCount());
+
+        int occupiedSeats = 0;
+        for (char[] seat : seatChart)
+            for (char c : seat)
+                if (c == OCCUPIED)
+                    occupiedSeats++;
+        System.out.println("Answer is: " + occupiedSeats);
     }
 
     public static boolean updateSeatingArea() {
@@ -79,14 +84,5 @@ public class Day11A {
         if (y < seatChart.length - 1 && seatChart[y + 1][x] == OCCUPIED)
             occupied++;
         return occupied;
-    }
-
-    public static int getOccupiedSeatsCount() {
-        int occupiedSeats = 0;
-        for (char[] seat : seatChart)
-            for (char c : seat)
-                if (c == OCCUPIED)
-                    occupiedSeats++;
-        return occupiedSeats;
     }
 }

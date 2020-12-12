@@ -10,7 +10,7 @@ My code for the programming challenges from Advent of Code. All of my code will 
 [Day six problem](https://adventofcode.com/2020/day/6) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DaySix)  
 [Day seven problem](https://adventofcode.com/2020/day/7) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DaySeven)  
 [Day eight problem](https://adventofcode.com/2020/day/8) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayEight)  
-[Day nine problem](https://adventofcode.com/2020/day/9) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayNine) 
+[Day nine problem](https://adventofcode.com/2020/day/9) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayNine)  
 [Day ten problem](https://adventofcode.com/2020/day/10) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTen)  
 [Day eleven problem](https://adventofcode.com/2020/day/11) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayEleven)  
 [Day twelve problem](https://adventofcode.com/2020/day/12) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTwelve)     

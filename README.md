@@ -14,7 +14,7 @@ My code for the programming challenges from Advent of Code. All of my code will 
 [Day ten problem](https://adventofcode.com/2020/day/10) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTen)  
 [Day eleven problem](https://adventofcode.com/2020/day/11) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayEleven)  
 [Day twelve problem](https://adventofcode.com/2020/day/12) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTwelve)  
-[Day thirteeen problem](https://adventofcode.com/2020/day/13) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayThirteen)  
+[Day thirteen problem](https://adventofcode.com/2020/day/13) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayThirteen)  
 [Day fourteen problem](https://adventofcode.com/2020/day/14) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFourteen)  
 
 

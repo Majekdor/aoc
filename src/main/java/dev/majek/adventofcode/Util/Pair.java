@@ -73,6 +73,17 @@ public final class Pair<A, B> {
     }
 
     /**
+     * Constructs a new instance of <code>Triplet</code> with the two values stored
+     * in the pair and the third value passed through.
+     *
+     * @param newValue the new third value.
+     * @return a new triplet.
+     */
+    public Triplet add(Object newValue) {
+        return new Triplet<Object, Object, Object>(this.getFirst(), this.getSecond(), newValue);
+    }
+
+    /**
      * Creates a hash code for this object.
      *
      * @return a hash code for this object.

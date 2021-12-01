@@ -1,23 +1,6 @@
 # [Advent of Code](https://adventofcode.com/)
 My code for the programming challenges from Advent of Code.
 
-## 2020 Problems & Solutions (Written in Java)
-[Day one problem](https://adventofcode.com/2020/day/1) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayOne)  
-[Day two problem](https://adventofcode.com/2020/day/2) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTwo)  
-[Day three problem](https://adventofcode.com/2020/day/3) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayThree)  
-[Day four problem](https://adventofcode.com/2020/day/4) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFour)  
-[Day five problem](https://adventofcode.com/2020/day/5) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFive)  
-[Day six problem](https://adventofcode.com/2020/day/6) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DaySix)  
-[Day seven problem](https://adventofcode.com/2020/day/7) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DaySeven)  
-[Day eight problem](https://adventofcode.com/2020/day/8) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayEight)  
-[Day nine problem](https://adventofcode.com/2020/day/9) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayNine)  
-[Day ten problem](https://adventofcode.com/2020/day/10) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTen)  
-[Day eleven problem](https://adventofcode.com/2020/day/11) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayEleven)  
-[Day twelve problem](https://adventofcode.com/2020/day/12) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTwelve)  
-[Day thirteen problem](https://adventofcode.com/2020/day/13) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayThirteen)  
-[Day fourteen problem](https://adventofcode.com/2020/day/14) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFourteen)    
-[Day fifteen problem](https://adventofcode.com/2020/day/15) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFifteen)
+View 2020 challenges [here](https://github.com/Majekdor/aoc/2020)
 
-
-## 2021 Problems & Solutions (Written in Rust)
-[Day one problem](https://adventofcode.com/2021/day/1) - [My solution](https://github.com/Majekdor/aoc_2021/blob/master/src/day_one/main.rs)  
+View 2021 challenges [here](https://github.com/Majekdor/aoc/2021)

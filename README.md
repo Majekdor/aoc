@@ -1,7 +1,7 @@
 # [Advent of Code](https://adventofcode.com/)
-My code for the programming challenges from Advent of Code. All of my code will be written in Java for 2020.
+My code for the programming challenges from Advent of Code.
 
-## Problems & Solutions
+## 2020 Problems & Solutions (Written in Java)
 [Day one problem](https://adventofcode.com/2020/day/1) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayOne)  
 [Day two problem](https://adventofcode.com/2020/day/2) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayTwo)  
 [Day three problem](https://adventofcode.com/2020/day/3) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayThree)  
@@ -19,3 +19,5 @@ My code for the programming challenges from Advent of Code. All of my code will 
 [Day fifteen problem](https://adventofcode.com/2020/day/15) - [My solution](https://github.com/Majekdor/AdventOfCode/tree/master/src/main/java/dev/majek/adventofcode/DayFifteen)
 
 
+## 2021 Problems & Solutions (Written in Rust)
+[Day one problem](https://adventofcode.com/2021/day/1) - [My solution](https://github.com/Majekdor/aoc_2021/blob/master/src/day_one/main.rs)  

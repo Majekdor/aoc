@@ -1,5 +1,4 @@
 use std::fs;
-use std::time::Instant;
 
 pub fn run() {
     println!("---------\nDay Three\n---------");

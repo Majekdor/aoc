@@ -8,7 +8,7 @@ mod day_four;
 fn main() {
     println!("Starting...\n");
     let start = Instant::now();
-    let run = "three";
+    let run = "four";
     match run {
         "one" => day_one::run(),
         "two" => day_two::run(),

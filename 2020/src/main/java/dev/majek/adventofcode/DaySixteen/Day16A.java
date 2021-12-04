@@ -16,8 +16,7 @@ public class Day16A {
      * Answer for my values: 24980
      */
     public static void main(String[] args) throws Exception {
-        String data = new String(Files.readAllBytes(Paths.get("C:\\Users\\ksbar\\Documents\\GitHub\\" +
-                "AdventOfCode\\src\\main\\resources\\day16inputs.txt")));
+        String data = new String(Files.readAllBytes(Paths.get("/home/kevinbarnes/IdeaProjects/AdventOfCode/2020/src/main/resources/day16inputs.txt")));
         List<String> inputs = Arrays.stream(data.split("\n")).collect(Collectors.toList());
         List<Pair<Integer, Integer>> ranges = new ArrayList<>();
         for (int i = 0; i < 20; i++) {

@@ -3,7 +3,7 @@ use std::fs;
 pub fn run() {
     println!("---------\nDay Three\n---------");
 
-    let contents = fs::read_to_string("src/day_three.txt").expect("File not found!");
+    let contents = fs::read_to_string("inputs/day_three.txt").expect("File not found!");
     let lines:Vec<String> = contents.split("\n").map(|s| s.to_string()).collect();
 
     // Part One

@@ -4,20 +4,24 @@ pub fn run() {
     println!("----------\n Day Four\n----------");
 
     let contents = fs::read_to_string("inputs/day_four.txt").expect("File not found!");
-
-    // Part One
     let mut sections:Vec<String> = contents.split("\n\n").map(|s| s.to_string()).collect();
     let first_line = sections[0].clone();
     let drawn_numbers:Vec<i32> = first_line.split(",").map(|c| i32::from_str_radix(c, 10).unwrap()).collect();
     sections.remove(0);
-    let mut part_one_boards = get_boards(&sections);
 
-    println!("Part One: {}", part_one(&drawn_numbers, &mut part_one_boards));
+    // Part One
+    let mut part_one_boards = get_boards(&sections);
+    let part_one = part_one(&drawn_numbers, &mut part_one_boards);
+    assert_eq!(part_one, 58838); // make sure it stays correct in my refactoring
+
+    println!("Part One: {}", part_one);
 
     // Part Two
     let mut part_two_boards = get_boards(&sections);
+    let part_two = part_two(&drawn_numbers, &mut part_two_boards);
+    assert_eq!(part_two, 6256); // make sure it stays correct in my refactoring
 
-    println!("Part Two: {}", part_two(&drawn_numbers, &mut part_two_boards));
+    println!("Part Two: {}", part_two);
 }
 
 fn part_one(drawn_numbers: &Vec<i32>, boards: &mut Vec<BingoBoard>) -> i32 {
@@ -26,11 +30,7 @@ fn part_one(drawn_numbers: &Vec<i32>, boards: &mut Vec<BingoBoard>) -> i32 {
             board.score_board(&drawn_number);
             board.check_won();
             if board.has_won {
-                let mut unmarked:i32 = 0;
-                for row in &board.rows {
-                    row.iter().filter(|n| !n.drawn).for_each(|n| unmarked += n.value);
-                }
-                return drawn_number * unmarked;
+                return get_final_score(board, drawn_number);
             }
         }
     }
@@ -39,17 +39,9 @@ fn part_one(drawn_numbers: &Vec<i32>, boards: &mut Vec<BingoBoard>) -> i32 {
 
 fn part_two(drawn_numbers: &Vec<i32>, boards: &mut Vec<BingoBoard>) -> i32 {
     for drawn_number in drawn_numbers {
-        let mut latest_win = -1;
         for board in boards.iter_mut() {
             board.score_board(&drawn_number);
             board.check_won();
-            if board.has_won {
-                let mut unmarked: i32 = 0;
-                for row in &board.rows {
-                    row.iter().filter(|n| !n.drawn).for_each(|n| unmarked += n.value);
-                }
-                latest_win = drawn_number * unmarked;
-            }
         }
         let mut non_winning_boards:Vec<BingoBoard> = boards.clone();
         non_winning_boards.retain(|b| !b.has_won);
@@ -66,14 +58,18 @@ fn final_board(drawn_numbers: &Vec<i32>, board: &mut BingoBoard) -> i32 {
         board.score_board(drawn_number);
         board.check_won();
         if board.has_won {
-            let mut unmarked: i32 = 0;
-            for row in &board.rows {
-                row.iter().filter(|n| !n.drawn).for_each(|n| unmarked += n.value);
-            }
-            return drawn_number * unmarked;
+            return get_final_score(board, drawn_number);
         }
     }
     -1
+}
+
+fn get_final_score(board: &BingoBoard, drawn_number: &i32) -> i32 {
+    let mut unmarked: i32 = 0;
+    for row in &board.rows {
+        row.iter().filter(|n| !n.drawn).for_each(|n| unmarked += n.value);
+    }
+    return drawn_number * unmarked;
 }
 
 fn get_boards(sections: &Vec<String>) -> Vec<BingoBoard> {

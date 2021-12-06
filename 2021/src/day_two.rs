@@ -20,6 +20,7 @@ pub fn run() {
         }
     }
 
+    assert_eq!(horizontal * depth, 2073315);
     println!("Part One: {}", horizontal * depth);
 
     // Part Two
@@ -41,5 +42,6 @@ pub fn run() {
         }
     }
 
+    assert_eq!(horizontal * depth, 1840311528);
     println!("Part Two: {}", horizontal * depth);
 }

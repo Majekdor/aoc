@@ -19,8 +19,10 @@ pub fn run() {
             epsilon.push_str("1");
         }
     }
+    let part_one = i64::from_str_radix(&gamma, 2).unwrap() * i64::from_str_radix(&epsilon, 2).unwrap();
 
-    println!("Part One: {}", i64::from_str_radix(&gamma, 2).unwrap() * i64::from_str_radix(&epsilon, 2).unwrap());
+    assert_eq!(part_one, 3009600);
+    println!("Part One: {}", part_one);
 
     // Part Two
     let mut oxygen_generator_rating = lines.clone();
@@ -45,7 +47,9 @@ pub fn run() {
             }
         }
     }
+    let part_two = i64::from_str_radix(&oxygen_generator_rating.get(0).unwrap(), 2).unwrap()
+        * i64::from_str_radix(&co2_scrubber_rating.get(0).unwrap(), 2).unwrap();
 
-    println!("Part Two: {}", i64::from_str_radix(&oxygen_generator_rating.get(0).unwrap(), 2).unwrap()
-        * i64::from_str_radix(&co2_scrubber_rating.get(0).unwrap(), 2).unwrap());
+    assert_eq!(part_two, 6940518);
+    println!("Part Two: {}", part_two);
 }

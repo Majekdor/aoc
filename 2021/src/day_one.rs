@@ -17,6 +17,8 @@ pub fn run() {
         }
         line += 1;
     }
+
+    assert_eq!(count, 1676);
     println!("Part One: {}", count);
 
     // Part Two
@@ -33,5 +35,6 @@ pub fn run() {
         line += 1;
     }
 
+    assert_eq!(count, 1706);
     println!("Part Two: {}", count);
 }

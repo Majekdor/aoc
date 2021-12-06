@@ -12,15 +12,15 @@ pub fn run() {
     // Part One
     let mut part_one_boards = get_boards(&sections);
     let part_one = part_one(&drawn_numbers, &mut part_one_boards);
-    assert_eq!(part_one, 58838); // make sure it stays correct in my refactoring
 
+    assert_eq!(part_one, 58838);
     println!("Part One: {}", part_one);
 
     // Part Two
     let mut part_two_boards = get_boards(&sections);
     let part_two = part_two(&drawn_numbers, &mut part_two_boards);
-    assert_eq!(part_two, 6256); // make sure it stays correct in my refactoring
 
+    assert_eq!(part_two, 6256);
     println!("Part Two: {}", part_two);
 }
 

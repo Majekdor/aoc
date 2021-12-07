@@ -5,3 +5,4 @@
 [Day four problem](https://adventofcode.com/2021/day/4) - [My solution](https://github.com/Majekdor/aoc/blob/master/2021/src/day_four.rs)  
 [Day five problem](https://adventofcode.com/2021/day/5) - [My solution](https://github.com/Majekdor/aoc/blob/master/2021/src/day_five.rs)  
 [Day six problem](https://adventofcode.com/2021/day/6) - [My solution](https://github.com/Majekdor/aoc/blob/master/2021/src/day_six.rs)  
+[Day seven problem](https://adventofcode.com/2021/day/7) - [My solution](https://github.com/Majekdor/aoc/blob/master/2021/src/day_seven.rs)  

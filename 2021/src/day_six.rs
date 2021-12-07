@@ -8,7 +8,7 @@ pub fn run() {
     let mut nums:Vec<i32> = contents.split(",").map(|s| s.parse().unwrap()).collect();
 
     // Part One
-    let mut part_one = fish_count(&mut nums, 80);
+    let part_one = fish_count(&mut nums, 80);
 
     assert_eq!(part_one, 375482);
     println!("Part One: {}", part_one);

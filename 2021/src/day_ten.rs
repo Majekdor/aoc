@@ -50,7 +50,7 @@ pub fn run() {
     scores.sort();
     let score = scores[scores.len() / 2];
 
-    assert_eq!(count, 3646451424);
+    assert_eq!(score, 3646451424);
     println!("Part Two: {}", score);
 }
 

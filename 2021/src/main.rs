@@ -3,7 +3,7 @@ use std::time::Instant;
 fn main() {
     println!("Starting...\n");
     let start = Instant::now();
-    let run = "fourteen";
+    let run = "fifteen";
     match run {
         "one" => day_one::run(),
         "two" => day_two::run(),
@@ -19,6 +19,7 @@ fn main() {
         "twelve" => day_twelve::run(),
         "thirteen" => day_thirteen::run(),
         "fourteen" => day_fourteen::run(),
+        "fifteen" => day_fifteen::run(),
 
         "all" => {
             day_one::run();
@@ -35,6 +36,7 @@ fn main() {
             day_twelve::run();
             day_thirteen::run();
             day_fourteen::run();
+            day_fifteen::run();
         },
         _ => println!("Invalid day.")
     }
@@ -55,3 +57,4 @@ mod day_eleven;
 mod day_twelve;
 mod day_thirteen;
 mod day_fourteen;
+mod day_fifteen;

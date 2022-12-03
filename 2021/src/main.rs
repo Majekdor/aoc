@@ -3,7 +3,7 @@ use std::time::Instant;
 fn main() {
     println!("Starting...\n");
     let start = Instant::now();
-    let run = "fifteen";
+    let run = "twelve";
     match run {
         "one" => day_one::run(),
         "two" => day_two::run(),

@@ -4,6 +4,8 @@ import Foundation
 public struct Main {
     
     public static func main() {
-        print(Day01.part2())
+        let start = Date()
+        print(Day02.part2())
+        print("Completed in \(Date().timeIntervalSince(start))s")
     }
 }
